@@ -36,3 +36,13 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Khóa RSA
+src/main/resources/keys/*.pem
+
+# H2 database files
+*.db
+*.mv.db
+*.trace.db
+
+# Maven
+.m2/

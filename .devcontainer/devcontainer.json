@@ -1,0 +1,34 @@
+{
+  "name": "CCP Backend Development",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": true,
+      "mavenVersion": "3.9.5"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "pivotal.vscode-spring-boot",
+        "redhat.vscode-xml"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "mvn dependency:go-offline",
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  }
+}
