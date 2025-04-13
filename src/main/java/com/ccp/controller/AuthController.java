@@ -139,4 +139,11 @@ public class AuthController {
 
         return ResponseEntity.ok(result);
     }
+        /**
+     * Health check endpoint
+     */
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("CCP Auth Service is up and running!");
+    }
 }
